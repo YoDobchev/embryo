@@ -272,12 +272,12 @@ gulp.task('build', gulp.parallel('js', 'css', 'plugins'))
 gulp.task('package', gulp.series('default', () =>
 
     gulp.src([
-        './index.html',
-        './dist/**',
-        './lib/**',
-        './images/**',
-        './plugin/**',
-        './**.md'
+        'index.html',
+        '*/dist/**/*',
+        '*/lib/**/*',
+        '*/pics/**/*',
+        '*/plugin/**/*',
+        '*/**.md'
     ]).pipe(zip('reveal-js-presentation.zip')).pipe(gulp.dest('./'))
 
 ))
